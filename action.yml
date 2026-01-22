@@ -334,6 +334,7 @@ runs:
         fi
 
         # Initialize KernelSU if enabled
+        eval $(opam env)
         CONFIG_FILE="arch/${{ inputs.arch }}/configs/${{ inputs.config }}"
         if [ "${{ inputs.ksu }}" == "true" ]; then
             echo "::group::Initializing KernelSU"
