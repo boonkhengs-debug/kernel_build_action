@@ -192,7 +192,7 @@ runs:
         # Download and set up the toolchain
         if [ "${{ inputs.aosp-clang }}" == "true" ]; then
             echo "::group::Downloading AOSP Clang"
-            if [ "${{ inputs.aosp-gcc }}" != "true" || true ]; then
+            if [ "${{ inputs.aosp-gcc }}" != "true" || false ]; then
                 error "AOSP GCC is required when using AOSP Clang."
             fi
             AOSP_CLANG_URL="https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/"
